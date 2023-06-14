@@ -1,0 +1,21 @@
+server:
+  port: 8070
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: java7
+    password: root
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:9999/HRMSCompanyDB
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+

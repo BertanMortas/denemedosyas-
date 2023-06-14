@@ -1,0 +1,30 @@
+server:
+  port: 8060
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: java7
+    password: root
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:9999/HRMSAuthDB
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  secretkey: ${secretkey}
+  audience: ${audience}
+  issuer: ${issuer}
+rabbitmq:
+  exchange: exchange
+  mailQueue: mailQueue
+  mailBindingKey: mailBindingKey
+  forgotPasswordQueue: forgot-password-queue
+  forgotPasswordBindingKey: forgot-password-key

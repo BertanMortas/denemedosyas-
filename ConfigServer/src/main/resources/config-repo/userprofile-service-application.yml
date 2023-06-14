@@ -1,0 +1,26 @@
+server:
+  port: 8090
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: java7
+    password: root
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: HR-ManagementDB
+      username: JavaUser
+      password: root
+
+jwt:
+  secretkey: ${secretkey}
+  audience: ${audience}
+  issuer: ${issuer}
+
+rabbitmq:
+  user-exchange: user-exchange
+  user-mailQueue: user-mailQueue
+  user-mailBindingKey: user-mailBindingKey
